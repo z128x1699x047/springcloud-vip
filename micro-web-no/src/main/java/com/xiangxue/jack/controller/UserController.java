@@ -126,7 +126,18 @@ public class UserController {
 
     @RequestMapping("/loadBalancerClient")
     public String loadBalancerClient() {
+
         ServiceInstance choose = loadBalancerClient.choose("micro-order");
+
+//        LoadBalancerRequest loadBalancerRequest = new LoadBalancerRequest() {
+//            @Override
+//            public Object apply(ServiceInstance instance) throws Exception {
+//                restTemplate.getForObject(instance.getHost()+instance.getPort(),xx)
+//                return null;
+//            }
+//        };
+//        loadBalancerRequest.apply(choose);
+
         log.info("====ServiceInstance:instanceId->" + choose.getInstanceId());
         log.info("====ServiceInstance:serviceId->" + choose.getServiceId());
         log.info("====ServiceInstance:ip@port@uri->" + choose.getHost()+"@"+choose.getPort()+"@"+choose.getUri());

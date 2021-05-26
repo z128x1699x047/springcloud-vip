@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 * 不能获取具体异常
 *
 * */
-@FeignClient(name = "MICRO-ORDER",path = "/feign"
+@FeignClient(name = "MICRO-ORDER",path = "/feign"/*,url = ""*/
         /*fallback = StudentServiceFallback.class,*/
         ,fallbackFactory = StudentServiceFallbackFactory.class)
 public interface StudentService {

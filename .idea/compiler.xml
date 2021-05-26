@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="micro-service-api" />
+        <module name="springcloud-eureka" />
+        <module name="micro-zuul" />
+        <module name="micro-order-no" />
+        <module name="micro-order-security" />
+        <module name="micro-turbine" />
+        <module name="micro-order-jwt" />
+        <module name="micro-jwt" />
+        <module name="micro-zipkin" />
+        <module name="springcloud-dashboard" />
+        <module name="micro-web-jwt" />
+        <module name="micro-security" />
+        <module name="micro-admin" />
+        <module name="micro-web-security" />
+        <module name="micro-web-no" />
+        <module name="micro-config-server" />
+        <module name="micro-security-db" />
+        <module name="micro-zuul-security" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="micro-admin" target="1.7" />
+      <module name="micro-config-server" target="1.7" />
+      <module name="micro-jwt" target="1.8" />
+      <module name="micro-order-jwt" target="1.8" />
+      <module name="micro-order-no" target="1.8" />
+      <module name="micro-order-security" target="1.8" />
+      <module name="micro-security" target="1.8" />
+      <module name="micro-security-db" target="1.8" />
+      <module name="micro-service-api" target="1.7" />
+      <module name="micro-turbine" target="1.7" />
+      <module name="micro-web-jwt" target="1.8" />
+      <module name="micro-web-no" target="1.7" />
+      <module name="micro-web-security" target="8" />
+      <module name="micro-zipkin" target="1.8" />
+      <module name="micro-zuul" target="1.7" />
+      <module name="micro-zuul-security" target="1.7" />
+      <module name="springcloud-dashboard" target="1.8" />
+      <module name="springcloud-eureka" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="micro-admin" options="-parameters" />
+      <module name="micro-config-server" options="-parameters" />
+      <module name="micro-jwt" options="-parameters" />
+      <module name="micro-order-jwt" options="-parameters" />
+      <module name="micro-order-no" options="-parameters" />
+      <module name="micro-order-security" options="-parameters" />
+      <module name="micro-security" options="-parameters" />
+      <module name="micro-security-db" options="-parameters" />
+      <module name="micro-service-api" options="-parameters" />
+      <module name="micro-turbine" options="-parameters" />
+      <module name="micro-web-jwt" options="-parameters" />
+      <module name="micro-web-no" options="-parameters" />
+      <module name="micro-web-security" options="-parameters" />
+      <module name="micro-zuul" options="-parameters" />
+      <module name="micro-zuul-security" options="-parameters" />
+      <module name="springcloud-dashboard" options="-parameters" />
+      <module name="springcloud-eureka" options="-parameters" />
+    </option>
+  </component>
+</project>

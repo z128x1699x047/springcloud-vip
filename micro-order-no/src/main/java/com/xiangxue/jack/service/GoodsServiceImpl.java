@@ -1,5 +1,6 @@
 package com.xiangxue.jack.service;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.xiangxue.jack.bean.ZgGoods;
 import com.xiangxue.jack.dao.CommonMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,7 @@ public class GoodsServiceImpl implements GoodsService {
         return i;
     }
 
+    @HystrixCommand
     @Transactional(readOnly = true)
     @Override
     public List<ZgGoods> queryAll() {

@@ -15,15 +15,12 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 import rx.Observable;
 import rx.Subscriber;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -92,6 +89,17 @@ public class UserServiceImpl implements UserService {
         return results;
     }
 
+    @HystrixCommand(fallbackMethod = "queryContentsFallback",
+            commandKey = "queryContents-oauth",
+            groupKey = "querygroup-one",
+            commandProperties = {
+                    @HystrixProperty(name = "execution.isolation.semaphore.maxConcurrentRequests",value = "100"),
+                    @HystrixProperty(name = "execution.isolation.strategy", value = "SEMAPHORE"),
+                    @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000000000")
+            },
+            threadPoolKey = "queryContentshystrixJackpool", threadPoolProperties = {
+            @HystrixProperty(name = "coreSize", value = "100")
+    })
     @Override
     public List<ConsultContent> queryContents(HttpServletRequest request) {
         log.info(Thread.currentThread().getName() + "========queryContents=========");
@@ -130,6 +138,13 @@ public class UserServiceImpl implements UserService {
         List<ConsultContent> results = restTemplate.getForObject("http://"
                 + SERVIER_NAME + "/user/queryContent", List.class);
         return results;
+    }
+
+    public List<ConsultContent> queryContentsFallback(HttpServletRequest request) {
+        f.incrementAndGet();
+        log.info("===============queryContentsFallback=================");
+
+        return null;
     }
 
     public List<ConsultContent> queryContentsFallback() {

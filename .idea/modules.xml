@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/micro-admin/micro-admin.iml" filepath="$PROJECT_DIR$/micro-admin/micro-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-config-server/micro-config-server.iml" filepath="$PROJECT_DIR$/micro-config-server/micro-config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-jwt/micro-jwt.iml" filepath="$PROJECT_DIR$/micro-jwt/micro-jwt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-order-jwt/micro-order-jwt.iml" filepath="$PROJECT_DIR$/micro-order-jwt/micro-order-jwt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-order-no/micro-order-no.iml" filepath="$PROJECT_DIR$/micro-order-no/micro-order-no.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-order-security/micro-order-security.iml" filepath="$PROJECT_DIR$/micro-order-security/micro-order-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-security/micro-security.iml" filepath="$PROJECT_DIR$/micro-security/micro-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-security-db/micro-security-db.iml" filepath="$PROJECT_DIR$/micro-security-db/micro-security-db.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-service-api/micro-service-api.iml" filepath="$PROJECT_DIR$/micro-service-api/micro-service-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-turbine/micro-turbine.iml" filepath="$PROJECT_DIR$/micro-turbine/micro-turbine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-web-jwt/micro-web-jwt.iml" filepath="$PROJECT_DIR$/micro-web-jwt/micro-web-jwt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-web-no/micro-web-no.iml" filepath="$PROJECT_DIR$/micro-web-no/micro-web-no.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-web-security/micro-web-security.iml" filepath="$PROJECT_DIR$/micro-web-security/micro-web-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-zipkin/micro-zipkin.iml" filepath="$PROJECT_DIR$/micro-zipkin/micro-zipkin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-zuul/micro-zuul.iml" filepath="$PROJECT_DIR$/micro-zuul/micro-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-zuul-security/micro-zuul-security.iml" filepath="$PROJECT_DIR$/micro-zuul-security/micro-zuul-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-dashboard/springcloud-dashboard.iml" filepath="$PROJECT_DIR$/springcloud-dashboard/springcloud-dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-eureka/springcloud-eureka.iml" filepath="$PROJECT_DIR$/springcloud-eureka/springcloud-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/springcloud-vip-2.iml" filepath="$PROJECT_DIR$/.idea/springcloud-vip-2.iml" />
+    </modules>
+  </component>
+</project>

@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
-@Slf4j
+    @Slf4j
 @Service
 public class GoodsServiceImpl implements GoodsService {
 

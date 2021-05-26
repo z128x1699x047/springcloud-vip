@@ -40,17 +40,18 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
 
     static final Logger logger = LoggerFactory.getLogger(AuthorizationServerConfiguration.class);
 
+    //token存到表oauth_client_token中去
     @Bean
     public TokenStore tokenStore() {
         return new JdbcTokenStore(dataSource);
     }
 
-    @Bean // 声明 ClientDetails实现
+    @Bean // 声明 ClientDetails实现  获取客户端信息oauth_client_details (认证的时候数据入库)
     public ClientDetailsService clientDetailsService() {
         return new JdbcClientDetailsService(dataSource);
     }
 
-
+    //将上面的客户端信息放到oauth2.0
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.withClientDetails(clientDetailsService);
@@ -64,11 +65,11 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
 //                .allowedTokenEndpointRequestMethods(HttpMethod.GET, HttpMethod.POST);
 
         // 存数据库
-        endpoints.tokenStore(tokenStore)
-                .authenticationManager(authenticationManager)
-                .userDetailsService(userServiceDetail);
+        endpoints.tokenStore(tokenStore) //token存储方式
+                .authenticationManager(authenticationManager) //权限管理器
+                .userDetailsService(userServiceDetail); //用户 实现oauth2.0的用户接口
 
-        // 配置tokenServices参数
+        // 配置tokenServices参数  控制token属性，如有效期，刷新
         DefaultTokenServices tokenServices = new DefaultTokenServices();
         tokenServices.setTokenStore(endpoints.getTokenStore());
         //支持refreshtoken
